@@ -60,7 +60,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
      if(quantity === 1){
         deleteFromCart(id)
      }else{
-        cartProducts.map((item)=> item.id === id ? {...item , quantity: item.quantity - 1} : item)
+        setCartProducts(cartProducts.map((item)=> item.id === id ? {...item , quantity: item.quantity - 1} : item))
      }
   }
 

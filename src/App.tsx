@@ -7,8 +7,8 @@ function App() {
 
 
   return (
-    <div className="bg-slate-800">
-      <div className="max-w-5xl h-screen mx-auto">
+    <div className="bg-slate-800 h-[100rem]">
+      <div className="max-w-7xl h-screen mx-auto">
         <CartProvider>
           <Navbar />
           <Routes>
