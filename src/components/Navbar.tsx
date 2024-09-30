@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoCloseSharp } from "react-icons/io5";
 import { CartContext } from "../context/CartContext";
+import CartProduct from "./CartProduct";
 
 const Navbar = () => {
 
@@ -34,6 +35,16 @@ const Navbar = () => {
                             <IoCloseSharp size={25} className="cursor-pointer" onClick={closeModal} />
                             <p className="font-medium text-xl">سبد خرید</p>
                         </div>
+                        {productCount > 0 ? (
+                                <>
+                                {cart.items.map(item=>(
+                                    <CartProduct key={item.id} id={item.id} quantity={item.quantity}></CartProduct>
+                                ))}
+                                <h3 className="text-center pt-8">مجموع قیمت: <span className="text-green-600">{cart.getTotalAmount()} تومان</span></h3>
+                                </>
+                            ) : (
+                                <h3 className="text-center text-red-600">سبد خرید خالی است...!</h3>
+                            )}
                     </dialog>
                 </>
             )}
