@@ -30,7 +30,7 @@ const Navbar = () => {
             {showModal && (
                 <>
                     <div className="fixed top-0 left-0 w-full h-screen bg-custom" />
-                    <dialog className='top-28 rounded-md border-none w-[30%] text-white bg-slate-800 animation-modal bg-modal p-3' open>
+                    <dialog className='top-28 rounded-md border-none lg:w-[30%] md:w-[50%] w-[70%] text-white bg-slate-800 animation-modal bg-modal p-3' open>
                         <div className="flex justify-between items-center p-3">
                             <IoCloseSharp size={25} className="cursor-pointer" onClick={closeModal} />
                             <p className="font-medium text-xl">سبد خرید</p>
@@ -43,7 +43,7 @@ const Navbar = () => {
                                 <h3 className="text-center pt-8">مجموع قیمت: <span className="text-green-600">{cart.getTotalAmount()} تومان</span></h3>
                                 </>
                             ) : (
-                                <h3 className="text-center text-red-600">سبد خرید خالی است...!</h3>
+                                <h3 className="text-center text-red-600">!...سبد خرید خالی است</h3>
                             )}
                     </dialog>
                 </>

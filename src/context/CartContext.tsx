@@ -6,6 +6,7 @@ import { getProductData } from "../data/productItems";
 interface CartItem {
   id: string;
   quantity: number;
+  image?:string
 }
 
 
